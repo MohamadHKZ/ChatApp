@@ -1,0 +1,22 @@
+[
+  {
+    "Id": "id-moh",
+    "DisplayName": "Mohamad",
+    "Email": "mohamad@example.com"
+  },
+  {
+    "Id": "id-hit",
+    "DisplayName": "haitham",
+    "Email": "haitham@example.com"
+  },
+  {
+    "Id": "id-hmsh",
+    "DisplayName": "hashem",
+    "Email": "hashem@example.com"
+  },
+  {
+    "Id": "id-os",
+    "DisplayName": "osama",
+    "Email": "osama@example.com"
+  }
+]
