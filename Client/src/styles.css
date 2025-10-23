@@ -1,4 +1,19 @@
 @import "tailwindcss";
+
  @plugin "daisyui" {
    themes: light --default;
  }
+
+
+@layer utilities {
+    .input {
+        @apply focus-within:outline-none focus-within:ring-2 focus-within:ring-violet-500 transition-colors duration-300 ;        
+    }
+    input{
+        @apply placeholder-shown:text-base-content/60;
+    }
+}
+
+.no-after::after {
+    content: none;
+}

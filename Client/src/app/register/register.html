@@ -1,0 +1,47 @@
+<div class="card bg-base-100 shadow-xl shadow-violet-500/50">
+  <div class="card-body">
+    <h2 class="card-title mx-auto text-3xl text-violet-500 text-shadow-xs text-shadow-base-200">
+      Sign Up
+    </h2>
+    <form class="space-y-4" #registrationForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-control">
+        <label class="label"><span class="label-text">Name</span></label>
+        <input
+          type="text"
+          name="displayName"
+          class="input input-bordered w-full"
+          placeholder="Full name"
+          ngModel
+          required
+        />
+      </div>
+      <div class="form-control">
+        <label class="label"><span class="label-text">Email</span></label>
+        <input
+          type="email"
+          name="email"
+          class="input input-bordered w-full"
+          placeholder="email@example.com"
+          ngModel
+          required
+        />
+      </div>
+      <div class="form-control">
+        <label class="label"><span class="label-text">Password</span></label>
+        <input
+          type="password"
+          name="password"
+          class="input input-bordered w-full"
+          placeholder="Password"
+          required
+          ngModel
+          minlength="6"
+        />
+      </div>
+      <div class="card-actions gap-3 justify-end">
+        <button class="btn btn-error" type="button" (click)="onCancelClick()">Cancel</button>
+        <button class="btn btn-primary" type="submit">Register</button>
+      </div>
+    </form>
+  </div>
+</div>

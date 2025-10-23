@@ -1,3 +1,6 @@
+
+
+/* This is fine */
 .no-after::after {
-    content: none;
+  content: none;
 }
