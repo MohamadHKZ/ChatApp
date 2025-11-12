@@ -12,6 +12,9 @@
     input{
         @apply placeholder-shown:text-base-content/60;
     }
+    html{
+        @apply w-screen h-screen overflow-hidden;
+    }    
 }
 
 .no-after::after {

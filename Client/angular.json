@@ -5,7 +5,7 @@
   "projects": {
     "Client": {
       "projectType": "application",
-      "schematics": {"@schematics/angular:component": {"skipTests": true}},
+      "schematics": {"@schematics/angular:component": {"skipTests": true},"@schematics/angular:guard": {"skipTests": true,"path": "src/guards"}},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",

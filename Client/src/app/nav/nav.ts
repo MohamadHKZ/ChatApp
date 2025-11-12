@@ -10,10 +10,11 @@ import {
 } from '@angular/core';
 import { FormControl, FormsModule, NgForm } from '@angular/forms';
 import { AccountsService } from '../../services/accounts.service';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink, RouterLinkActive],
   templateUrl: './nav.html',
   styleUrl: './nav.css',
 })

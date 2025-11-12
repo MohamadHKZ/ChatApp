@@ -1,8 +1,12 @@
 <nav class="navbar bg-linear-to-b from-violet-500 to-violet-200 p-5 justify-between">
-  <a href="/" class="flex items-center w-fit gap-3">
+  <a
+    routerLink="/"
+    routerLinkActive="logo-active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="text-white flex items-center w-fit gap-3"
+  >
     <img src="logo.png" class="size-11 flex-none" alt="logo" />
-    <span
-      class="grow hover:text-violet-500 hover:transition duration-300 text-white font-bold text-2xl text-shadow-lg text-shadow-primary"
+    <span class="grow duration-300 font-bold text-2xl text-shadow-lg text-shadow-primary"
       >Chat App
     </span>
     <div class="divider divider-horizontal"></div>
@@ -11,7 +15,7 @@
   <ul
     class="menu menu-horizontal gap-2 rounded-lg p-2 text-white font-bold text-base text-shadow-lg bg-violet-600/30"
   >
-    <li><a>Matches</a></li>
+    <li><a routerLink="/members" routerLinkActive="menu-active">Matches</a></li>
     <li><a>Messages</a></li>
     <li><a>Lists</a></li>
   </ul>

@@ -1,28 +1,19 @@
-<div class="bg-radial from-base-300 from-60% to-violet-200">
-  <div class="hero min-h-screen w-full">
-    @if (accountsService.CurrentUser()!=null) { } @else if(!registerClicked()) {
-    <div class="hero-content text-center">
-      <div class="max-w-md">
-        <img src="logo.png" class="size-42 mx-auto" alt="logo" />
-        <h1 class="text-5xl font-bold">Chat App</h1>
-        <div class="py-6">
-          <p class="font-bold text-center text-2xl">Connect instantly, chat freely</p>
-          <p>
-            Join our community and start real conversations — anytime, anywhere. Create your free
-            account to message friends, share moments, and stay connected in one simple, secure
-            place.
-          </p>
-        </div>
-        <div class="flex gap-3 items-center justify-center">
-          <button class="btn btn-outline btn-primary" (click)="registerClicked.set(true)">
-            Register
-          </button>
-          <button class="btn btn-outline btn-secondary">Learn More</button>
-        </div>
+<div class="hero min-h-screen w-full">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <img src="logo.png" class="size-42 mx-auto" alt="logo" />
+      <h1 class="text-5xl font-bold">Chat App</h1>
+      <div class="py-6">
+        <p class="font-bold text-center text-2xl">Connect instantly, chat freely</p>
+        <p>
+          Join our community and start real conversations — anytime, anywhere. Create your free
+          account to message friends, share moments, and stay connected in one simple, secure place.
+        </p>
+      </div>
+      <div class="flex gap-3 items-center justify-center">
+        <button class="btn btn-outline btn-primary" (click)="onRegisterClicked()">Register</button>
+        <button class="btn btn-outline btn-secondary">Learn More</button>
       </div>
     </div>
-    } @else if (accountsService.CurrentUser() == null) {
-    <app-register class="w-1/2" (cancelClickEmitter)="registerClicked.set(false)" />
-    }
   </div>
 </div>

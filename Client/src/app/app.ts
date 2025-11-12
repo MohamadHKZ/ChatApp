@@ -1,14 +1,15 @@
-import { Component, OnInit, signal, Signal } from '@angular/core';
-import { UsersService } from '../services/users.service';
-import { User } from '../models/user.model';
+import { Component, inject, OnInit, signal, Signal } from '@angular/core';
 import { Nav } from './nav/nav';
-import { Register } from './register/register';
-import { Home } from './home/home';
+import { RouterOutlet } from '@angular/router';
+import { Content } from './shared/content/content';
+import { InitService } from '../services/init.service';
 
 @Component({
   selector: 'app-root',
-  imports: [Nav, Home],
+  imports: [Nav, RouterOutlet, Content],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {}
+export class App {
+  InitService = inject(InitService);
+}

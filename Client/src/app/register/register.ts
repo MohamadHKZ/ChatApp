@@ -2,6 +2,7 @@ import { NgFor } from '@angular/common';
 import { Component, EventEmitter, inject, output, Output, viewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { AccountsService } from '../../services/accounts.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -12,6 +13,7 @@ import { AccountsService } from '../../services/accounts.service';
 export class Register {
   registrationForm = viewChild<NgForm>('registrationForm');
   accountsService = inject(AccountsService);
+  router = inject(Router);
   onSubmit() {
     if (this.registrationForm()?.valid) {
       const formValue = this.registrationForm()?.value;
@@ -23,9 +25,7 @@ export class Register {
     }
   }
 
-  cancelClickEmitter = output<void>();
-
   onCancelClick() {
-    this.cancelClickEmitter.emit();
+    this.router.navigateByUrl('/');
   }
 }

@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer utilities {
+.logo-active{
+    @apply text-violet-500;
+}
+}
